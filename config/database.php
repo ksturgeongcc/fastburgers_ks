@@ -2,29 +2,16 @@
 
 // Database connection details
 $host = 'localhost';
-$username = 'karen';
-$password = 'password';
+$username = 'root';
+$password = '';
 $database = 'fastburgers';
 
-/**
- * Create a new mysqli connection
- */
+// Attempt to create a database connection
 $conn = new mysqli($host, $username, $password, $database);
 
-/**
- * Check for connection errors
- */
-if ($conn->connect_error) {
-    die('Database connection failed: ' . $conn->connect_error);
-}
-else echo('connection successful');
 
-/**
- * Set the character set (important for security and emojis)
- */
+// Set the character set after a successful connection
 $conn->set_charset('utf8mb4');
 
-/**
- * Return the connection so it can be used elsewhere
- */
+// Return the connection for use in controllers
 return $conn;

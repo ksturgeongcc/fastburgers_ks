@@ -1,1 +1,5 @@
-<h1>Contact</h1>
+<?php
+// This view displays contact information.
+?>
+<h1>Contact Us</h1>
+
