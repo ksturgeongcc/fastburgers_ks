@@ -1,5 +1,7 @@
 <?php
 // This controller handles the admin users page (/admin/users)
+$db = require BASE_PATH . '/config/database.php';
+echo "Database connection status: " . ($db->connect_error ? 'Failed - ' . $db->connect_error : 'Successful');
 
 class UsersController
 {
@@ -16,9 +18,9 @@ class UsersController
         ];
 
         // Choose the admin view
-        $view = __DIR__ . '/../../Views/admin/users.php';
+        $view = BASE_PATH . '/app/Views/admin/users.php';
 
         // Load the layout
-        require __DIR__ . '/../../Views/layout.php';
+        require BASE_PATH . '/app/Views/layout.php';
     }
 }

@@ -1,5 +1,7 @@
 <?php
 // This controller handles the admin orders page (/admin/orders)
+$db = require BASE_PATH . '/config/database.php';
+echo "Database connection status: " . ($db->connect_error ? 'Failed - ' . $db->connect_error : 'Successful');
 
 class OrdersController
 {
@@ -15,9 +17,9 @@ class OrdersController
         ];
 
         // Choose the admin view
-        $view = __DIR__ . '/../../Views/admin/orders.php';
+        $view = BASE_PATH . '/app/Views/admin/orders.php';
 
         // Load the layout
-        require __DIR__ . '/../../Views/layout.php';
+        require BASE_PATH . '/app/Views/layout.php';
     }
 }

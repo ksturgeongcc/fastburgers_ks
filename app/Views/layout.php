@@ -3,8 +3,8 @@
 // It includes the header, navigation, the selected view, and the footer.
 $baseUrl = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])), '/');
 
-require __DIR__ . '/partials/header.php';
-require __DIR__ . '/partials/nav.php';
+require BASE_PATH . '/app/Views/partials/header.php';
+require BASE_PATH . '/app/Views/partials/nav.php';
 ?>
 
 <main>
@@ -15,4 +15,4 @@ require __DIR__ . '/partials/nav.php';
 </main>
 
 <?php
-require __DIR__ . '/partials/footer.php';
+require BASE_PATH . '/app/Views/partials/footer.php';

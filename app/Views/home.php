@@ -4,8 +4,3 @@
 ?>
 <h1>Home</h1>
 
-<p><?= $message ?></p>
-
-<p>
-This page demonstrates how controllers, views, and layouts work together.
-</p>
