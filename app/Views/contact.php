@@ -1,7 +1,1 @@
-<?php
-// This view displays contact information.
-?>
-<h1>Contact Us</h1>
-
-<p>Email: <?= $email ?></p>
-<p>Phone: <?= $phone ?></p>
+<h1>Contact</h1>

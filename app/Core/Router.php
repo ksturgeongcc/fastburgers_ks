@@ -17,26 +17,32 @@ class Router
     }
 
     // Normalise empty to /
+    // if path is empty string, set to '/'
     $path = $path === '' ? '/' : $path;
 
     switch ($path) {
         case '/':
-            require __DIR__ . '/../Controllers/HomeController.php';
+            require BASE_PATH . '/app/Controllers/HomeController.php';
             (new HomeController())->index();
             break;
 
         case '/contact':
-            require __DIR__ . '/../Controllers/ContactController.php';
+            require BASE_PATH . '/app/Controllers/ContactController.php';
             (new ContactController())->index();
             break;
 
+        case '/about':
+            require BASE_PATH . '/app/Controllers/AboutController.php';
+            (new AboutController())->index();
+            break;
+
         case '/admin/users':
-            require __DIR__ . '/../Controllers/Admin/UsersController.php';
+            require BASE_PATH . '/app/Controllers/Admin/UsersController.php';
             (new UsersController())->index();
             break;
 
         case '/admin/orders':
-            require __DIR__ . '/../Controllers/Admin/OrdersController.php';
+            require BASE_PATH . '/app/Controllers/Admin/OrdersController.php';
             (new OrdersController())->index();
             break;
 

@@ -7,6 +7,7 @@
 <head>
     <meta charset="utf-8">
     <title><?= $title ?? 'Fast Burgers' ?></title>
-<link rel="stylesheet" href="<?= $baseUrl ?>/assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="<?= BASE_PATH ?>/assets/css/style.css">
 </head>
 <body>
